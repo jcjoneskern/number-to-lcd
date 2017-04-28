@@ -6,7 +6,7 @@ describe("number converter", function(){
       expect(converter(0)).toBe("._.\n|.|\n|_|");
     });
     it("converts 1", function() {
-      expect(converter(1)).toBe("..|\n..|\n..|");
+      expect(converter(1)).toBe("...\n..|\n..|");
     });
     it("converts 2", function() {
       expect(converter(2)).toBe("._.\n._|\n|_.");
@@ -31,6 +31,14 @@ describe("number converter", function(){
     });
     it("converts 9", function() {
       expect(converter(9)).toBe("._.\n|_|\n..|");
+    });
+  });
+  describe("converts multiple digits", function(){
+    it("converts 10", function() {
+      expect(converter(10)).toBe("...._.\n..||.|\n..||_|");
+    });
+    it("converts 910", function() {
+      expect(converter(910)).toBe("._....._.\n|_|..||.|\n..|..||_|");
     });
   });
 });
