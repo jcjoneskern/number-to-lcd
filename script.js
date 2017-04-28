@@ -12,11 +12,11 @@ function converter(num) {
       for(let j = 0; j < num.length; j++) {
         output += outputs[num[j]].substr(i,3);
       }
-      output += "\n";
+      if (i < 8) {
+        output += "\n";
+      }
     }
-    output = output.substr(0, output.length - 1);
-    // could probably use a conditional to not add a \n after the last loop, but this is fewer lines of code
-
+    // output = output.substr(0, output.length - 1); // either this or the if statement works
     return output;
   }
 }
