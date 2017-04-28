@@ -2,7 +2,6 @@ function converter(num) {
   const outputs = ["._.\n|.|\n|_|", "...\n..|\n..|", "._.\n._|\n|_.", "._.\n._|\n._|", "...\n|_|\n..|", "._.\n|_.\n._|", "._.\n|_.\n|_|", "._.\n..|\n..|", "._.\n|_|\n|_|", "._.\n|_|\n..|"];
   let output = "";
 
-
   if(num < 10) {
     return outputs[num];
   } else {
@@ -16,11 +15,10 @@ function converter(num) {
       output += "\n";
     }
     output = output.substr(0, output.length - 1);
+    // could probably use a conditional to not add a \n after the last loop, but this is fewer lines of code
 
     return output;
   }
-
-
 }
 
 
